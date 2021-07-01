@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021 Samuel123456-stack
+Copyright (c) 2021 GGomes08
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

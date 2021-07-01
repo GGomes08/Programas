@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gusta\\Documents\\Programas\\Programas.csproj",
+      "projectUniqueName": "C:\\Users\\gusta\\Documents\\Programas\\Programas_C#\\Programas.csproj",
       "projectName": "Programas",
-      "projectPath": "C:\\Users\\gusta\\Documents\\Programas\\Programas.csproj",
+      "projectPath": "C:\\Users\\gusta\\Documents\\Programas\\Programas_C#\\Programas.csproj",
       "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gusta\\Documents\\Programas\\obj\\",
+      "outputPath": "C:\\Users\\gusta\\Documents\\Programas\\Programas_C#\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config"

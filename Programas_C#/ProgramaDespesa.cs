@@ -40,7 +40,9 @@ namespace Programas_C_
                         //Na primeira opção você adiciona a despesa com o nome, valor e o tempo de validade até pagar
                         Console.WriteLine("Opcao Adicionar Despesa");
                         Despesa desp;
+                        Console.Write("Nome da Despesa:");
                         string nome = Console.ReadLine();
+                        Console.Write("Valor da Despesa");
                         float valor = float.Parse(Console.ReadLine());
                         DateTime dataCriada = DateTime.Now;
                         desp = new Despesa(nome, valor, dataCriada);

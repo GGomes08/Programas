@@ -19,7 +19,7 @@ namespace Programas_C_
             do
             {
                 Console.WriteLine("Nome do Usuario: " + nomeUsuario);
-                Console.WriteLine("Saldo: " + saldo);
+                Console.WriteLine("Saldo: R$" + saldo);
                 Console.WriteLine("=========================================");
                 Console.WriteLine("<0>-Sair do Programa");
                 Console.WriteLine("<1>-Add Despesa");
@@ -42,7 +42,7 @@ namespace Programas_C_
                         Despesa desp;
                         Console.Write("Nome da Despesa:");
                         string nome = Console.ReadLine();
-                        Console.Write("Valor da Despesa");
+                        Console.Write("Valor da Despesa:");
                         float valor = float.Parse(Console.ReadLine());
                         DateTime dataCriada = DateTime.Now;
                         desp = new Despesa(nome, valor, dataCriada);
@@ -57,7 +57,7 @@ namespace Programas_C_
                         foreach (Despesa item in lista)
                         {
 
-                            Console.WriteLine("Indice:" + " " + count + item);
+                            Console.WriteLine("Indice:" + count + " "  + item);
                             count++;
                             float somaAux = item.Valor;
                             somaTotal += somaAux;
@@ -80,6 +80,7 @@ namespace Programas_C_
                         }
                         break;
                     case 3:
+
                         Console.WriteLine("Opcao Listar Despesas");
                         if (lista.Count == 0)
                         {
@@ -89,8 +90,16 @@ namespace Programas_C_
                         {
                             Console.WriteLine("Lista das Despesas");
                             foreach (Despesa item in lista)
+                            {
+
+
+                                float somaAux = item.Valor;
+                                somaTotal += somaAux;
                                 Console.WriteLine(item);
+                                
+                            }
                             Console.WriteLine("Aqui se encontram:" + lista.Count + " Despesas");
+                            Console.WriteLine("Soma Total das Despesas:" + somaTotal);
                         }
                         break;
                     case 4:
@@ -102,7 +111,20 @@ namespace Programas_C_
 
                         break;
                     case 5:
+                    //Por hora fará o pagamento de todas as despesas.
                         Console.WriteLine("Opcao 5");
+                        float saldoFinal = saldo - somaTotal;
+                        float despesaFinal = somaTotal - saldo;
+                        if(saldo>somaTotal)
+                        {
+                            Console.WriteLine("O saldo que restará caso pague estas despesas será de:" + saldoFinal);
+                        } else if (saldo<somaTotal)
+                        {
+                            Console.WriteLine("O saldo que possui não será o suficiente para pagar as despesas irá sobrar:" + despesaFinal+ " para ser pago");
+                        } else if (saldo==somaTotal)
+                        {
+                            Console.WriteLine("Seu saldo é suficiente para estas despesas, precisará adicionar mais saldo para especular a quitação das despesas");
+                        }
                         break;
                 }
             } while (op != 0 || op >= 6);

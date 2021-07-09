@@ -48,6 +48,7 @@ namespace Programas_C_
                         desp = new Despesa(nome, valor, dataCriada);
                         Console.WriteLine("Despesa Adicionado");
                         lista.Add(desp);
+                        //Preciso começar a listar as despesas na questão de adição por erros
                         break;
                     case 2:
                         //Precisa ser desenvolvido melhor
@@ -57,7 +58,7 @@ namespace Programas_C_
                         foreach (Despesa item in lista)
                         {
 
-                            Console.WriteLine("Indice:" + count + " "  + item);
+                            Console.WriteLine("Indice:" + count + " " + item);
                             count++;
                             float somaAux = item.Valor;
                             somaTotal += somaAux;
@@ -96,7 +97,7 @@ namespace Programas_C_
                                 float somaAux = item.Valor;
                                 somaTotal += somaAux;
                                 Console.WriteLine(item);
-                                
+
                             }
                             Console.WriteLine("Aqui se encontram:" + lista.Count + " Despesas");
                             Console.WriteLine("Soma Total das Despesas:" + somaTotal);
@@ -111,19 +112,29 @@ namespace Programas_C_
 
                         break;
                     case 5:
-                    //Por hora fará o pagamento de todas as despesas.
+                        //Por hora fará o pagamento de todas as despesas.
                         Console.WriteLine("Opcao 5");
                         float saldoFinal = saldo - somaTotal;
                         float despesaFinal = somaTotal - saldo;
-                        if(saldo>somaTotal)
+                        Console.WriteLine(saldoFinal);
+                        Console.WriteLine(despesaFinal);
+                        Console.WriteLine(saldo);
+                        Console.WriteLine(somaTotal);
+                        if (saldo > somaTotal)
                         {
                             Console.WriteLine("O saldo que restará caso pague estas despesas será de:" + saldoFinal);
-                        } else if (saldo<somaTotal)
+                        }
+                        else if (saldo < somaTotal)
                         {
-                            Console.WriteLine("O saldo que possui não será o suficiente para pagar as despesas irá sobrar:" + despesaFinal+ " para ser pago");
-                        } else if (saldo==somaTotal)
+                            Console.WriteLine("O saldo que possui não será o suficiente para pagar as despesas irá sobrar:" + despesaFinal + " para ser pago");
+                        }
+                        else if (saldo == somaTotal && saldo>0)
                         {
                             Console.WriteLine("Seu saldo é suficiente para estas despesas, precisará adicionar mais saldo para especular a quitação das despesas");
+                        }
+                        else if(saldo == 0)
+                        {
+                            Console.WriteLine("Seu saldo se encontra zerado para a especulação de despesas");
                         }
                         break;
                 }

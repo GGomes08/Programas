@@ -38,6 +38,8 @@ namespace Programas_C_
                         break;
                     case 1:
                         //Na primeira opção você adiciona a despesa com o nome, valor e o tempo de validade até pagar
+                        //Soma total precisa ser revisada
+                        float somaAux = 0; 
                         Console.WriteLine("Opcao Adicionar Despesa");
                         Despesa desp;
                         Console.Write("Nome da Despesa:");
@@ -48,19 +50,33 @@ namespace Programas_C_
                         desp = new Despesa(nome, valor, dataCriada);
                         Console.WriteLine("Despesa Adicionado");
                         lista.Add(desp);
-                        //Preciso começar a listar as despesas na questão de adição por erros
-                        break;
-                    case 2:
-                        //Precisa ser desenvolvido melhor
-                        Console.WriteLine("Opção Eliminar Despesa");
-                        Console.WriteLine("Informe o Indice da Despesa para ser eliminada");
-                        int count = 0;
+                                                int count = 0;
                         foreach (Despesa item in lista)
                         {
 
                             Console.WriteLine("Indice:" + count + " " + item);
                             count++;
-                            float somaAux = item.Valor;
+                            
+                            somaAux = item.Valor;
+                            somaTotal += somaAux;
+                            
+
+                        }
+                        
+                        Console.WriteLine(somaTotal);
+                        //Preciso começar a listar as despesas na questão de adição por erros
+                        break;
+                    case 2:
+                        //Precisa ser desenvolvido melhor(somaTotal)
+                        Console.WriteLine("Opção Eliminar Despesa");
+                        Console.WriteLine("Informe o Indice da Despesa para ser eliminada");
+                         count = 0;
+                        foreach (Despesa item in lista)
+                        {
+
+                            Console.WriteLine("Indice:" + count + " " + item);
+                            count++;
+                            somaAux = item.Valor;
                             somaTotal += somaAux;
 
                         }
@@ -94,7 +110,7 @@ namespace Programas_C_
                             {
 
 
-                                float somaAux = item.Valor;
+                                somaAux = item.Valor;
                                 somaTotal += somaAux;
                                 Console.WriteLine(item);
 
@@ -116,10 +132,7 @@ namespace Programas_C_
                         Console.WriteLine("Opcao 5");
                         float saldoFinal = saldo - somaTotal;
                         float despesaFinal = somaTotal - saldo;
-                        Console.WriteLine(saldoFinal);
-                        Console.WriteLine(despesaFinal);
-                        Console.WriteLine(saldo);
-                        Console.WriteLine(somaTotal);
+
                         if (saldo > somaTotal)
                         {
                             Console.WriteLine("O saldo que restará caso pague estas despesas será de:" + saldoFinal);

@@ -26,10 +26,9 @@ namespace Programas_C_
                 Console.WriteLine("<1>-Add Despesa");
                 Console.WriteLine("<2>-Editar Despesa");
                 Console.WriteLine("<3>-Eliminar Despesa");
-                Console
-                    .WriteLine("<4>-Listar Despesa por adição ou por periodo");
+                Console.WriteLine("<4>-Listar Despesa");
                 Console.WriteLine("<5>-Add Dinheiro na Conta");
-                Console.WriteLine("<6>-Pagar Despesa de um periodo");
+                Console.WriteLine("<6>-Fazer Especulação e Pagar Despesas de um periodo");
                 Console.WriteLine("========================================");
                 Console.Write("Opcão Selecionada:");
                 op = Convert.ToInt32(Console.ReadLine());
@@ -41,13 +40,14 @@ namespace Programas_C_
                         break;
                     case 1:
                         //Na primeira opção você adiciona a despesa com o nome, valor e o tempo de validade até pagar
+                        Console.WriteLine("");
                         Console.WriteLine("Opcao Adicionar Despesa");
                         Despesa desp;
                         Console.Write("Nome da Despesa:");
                         string nome = Console.ReadLine();
                         Console.Write("Valor da Despesa:");
                         float valor = float.Parse(Console.ReadLine());
-                        Console.Write("Data de Validade da Despesa:");
+                        Console.Write("Data de Validade da Despesa:(Ex: xx-xx-xxxx ou xx/xx/xxxx)");
                         string dataVal = Console.ReadLine();
                         DateTime dataValConv;
                         var dataValida =
@@ -69,7 +69,13 @@ namespace Programas_C_
 
                         Console.WriteLine (somaTotal);
                         break;
+                        case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("Em breve nova função");
+                        //Pensar na logica
+                        break;
                     case 3:
+                        Console.WriteLine("");
                         Console.WriteLine("Opção Eliminar Despesa");
                         Console
                             .WriteLine("Informe o Indice da Despesa para ser eliminada");
@@ -98,26 +104,10 @@ namespace Programas_C_
                         break;
                     case 4:
                         Console.WriteLine("Opcao Listar Despesas");
-                        Console
+                        //Listagem por adição e periodo precisa ser revisada
+                        /*Console
                             .WriteLine("Deseja listar por adição ou por periodo ?");
-                        string opLista = Console.ReadLine();
-                        if (opLista.equals("adição") || opLista.equals("adicao")
-                        )
-                        {
-                            Console.WriteLine("Lista das Despesas por Adição");
-                            foreach (Despesa item in lista)
-                            {
-                                somaAux = item.Valor;
-
-                                Console.WriteLine (item);
-                            }
-                            somaTotal += somaAux;
-                            Console.WriteLine("Aqui se encontram:" + lista.Count +" Despesas");
-                            Console.WriteLine("Soma Total das Despesas:" +somaTotal);
-                        }
-                        else if (opLista.equals(periodo))
-                        {
-                        }
+                        string opLista = Console.ReadLine();*/
 
                         if (lista.Count == 0)
                         {
@@ -125,7 +115,7 @@ namespace Programas_C_
                         }
                         else
                         {
-                            /*Console.WriteLine("Lista das Despesas");
+                            Console.WriteLine("Lista das Despesas");
                             foreach (Despesa item in lista)
                             {
 
@@ -135,7 +125,7 @@ namespace Programas_C_
                             }
                             somaTotal += somaAux;
                             Console.WriteLine("Aqui se encontram:" + lista.Count + " Despesas");
-                            Console.WriteLine("Soma Total das Despesas:" + somaTotal);*/
+                            Console.WriteLine("Soma Total das Despesas:" + somaTotal);
                         }
                         break;
                     case 5:

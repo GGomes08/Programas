@@ -56,7 +56,7 @@ namespace Programas_C_
                         desp =
                             new Despesa(nome, valor, dataCriada, dataValConv);
                         Console.WriteLine("Despesa Adicionado");
-                        lista.Add (desp);
+                        lista.Add(desp);
                         int count = 0;
                         foreach (Despesa item in lista)
                         {
@@ -67,11 +67,49 @@ namespace Programas_C_
 
                         somaTotal += somaAux;
 
-                        Console.WriteLine (somaTotal);
+                        Console.WriteLine(somaTotal);
                         break;
-                        case 2:
+                    case 2:
                         Console.WriteLine("");
-                        Console.WriteLine("Em breve nova função");
+                        Console.Write("Opção Editar Despesa");
+                        Console.WriteLine("Informe o Indice da Despesa a ser editada");
+                        count = 0;
+                        foreach (Despesa item in lista)
+                        {
+                            Console.WriteLine("Indice:" + count + " " + item);
+                            count++;
+
+                            somaAux = item.Valor;
+                        }
+                        somaTotal += somaAux;
+                        Console.WriteLine(somaTotal);
+                        int indiceEdita = Convert.ToInt32(Console.ReadLine());
+
+                        if (indiceEdita > count)
+                        {
+                            Console
+                                .WriteLine("A Despesa não se encontra aqui, informe uma que exista");
+                        }
+                        else
+                        {
+                            Console.Write("Editar Nome da Despesa:");
+                            String nomeEdita = Console.ReadLine();
+                            Console.WriteLine("");
+                            Console.Write("Editar Valor:");
+                            float valorEdita = float.Parse(Console.ReadLine());
+                            Console.WriteLine("");
+                            string dataValEdit = Console.ReadLine();
+                            DateTime dataValConvEdit;
+                            var dataEdita = DateTime.TryParse(dataValEdit, out dataValConvEdit);
+                            DateTime dataCriadaEdit = DateTime.Now;
+                            lista[indiceEdita].NomeDespesa = nomeEdita;
+                            lista[indiceEdita].Valor = valorEdita;
+                            lista[indiceEdita].DataValidade = dataValConvEdit;
+                            lista[indiceEdita].DataHora = dataCriadaEdit;
+                            Console.WriteLine("Despesa "+ indiceEdita + " Editado com sucesso" );
+
+                        }
+
                         //Pensar na logica
                         break;
                     case 3:
@@ -88,17 +126,17 @@ namespace Programas_C_
                             somaAux = item.Valor;
                         }
                         somaTotal += somaAux;
-                        Console.WriteLine (somaTotal);
-                        int indiceDespesa = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(somaTotal);
+                        int indiceRemove = Convert.ToInt32(Console.ReadLine());
 
-                        if (indiceDespesa > count)
+                        if (indiceRemove > count)
                         {
                             Console
                                 .WriteLine("A Despesa não se encontra aqui, informe uma que exista");
                         }
                         else
                         {
-                            lista.RemoveAt (indiceDespesa);
+                            lista.RemoveAt(indiceRemove);
                             Console.WriteLine("A Despesa foi deletada");
                         }
                         break;

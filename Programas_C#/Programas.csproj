@@ -5,6 +5,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <GenerateProgramFile>false</GenerateProgramFile>
     <StartupObject>Programas_C_.ProgramaDespesa</StartupObject>
+    <StartupObject>Programas_C_.ProgramaCompactador</StartupObject>
     <RootNamespace>Programas_C_</RootNamespace>
   </PropertyGroup>
 

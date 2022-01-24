@@ -1,4 +1,5 @@
 ﻿using System;
+using Desafios.Classes_Nuvens_de_Cinzas;
 
 namespace Desafios
 {
@@ -7,13 +8,25 @@ namespace Desafios
         static void Main(string[] args)
         {
             Console.WriteLine("Desafio I - Nuvens de Cinza");
-            Console.WriteLine("Informe o número de linhas e colunas respectivamente para a matriz");
-            var linhasColunas = Console.ReadLine().Split(' ');
-            var linhas = int.Parse(linhasColunas[0]);
-            var colunas = int.Parse(linhasColunas[1]);
-            Console.WriteLine(linhas+ " " + colunas);
+            contaAeroportos();
 
 
+        }
+
+        public static void contaAeroportos(){
+
+            char[,] mapa = new char[,]{
+                {' ',' ',' ',' ',' '},
+                {' ','*',' ',' ',' '},
+                {'A',' ',' ','*',' '},
+                {' ','*',' ',' ','A'},
+                {' ',' ',' ',' ',' '},
+            };
+
+            char[,] mapaAtual = AtributosMetodos.expansao(mapa);
+            int numAero = AtributosMetodos.numeroAeroportos(mapa);
+            Console.WriteLine(mapaAtual[2,0]);
+            Console.WriteLine(numAero);
         }
     }
 }

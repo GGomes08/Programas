@@ -7,16 +7,24 @@ namespace Programas_C_
         static void Main(string[] args)
         {
             int numero;
-            Console.Write("Digite um numero:");
+            Console.Write("Digite um termo de Fibonacci:");
             numero = Convert.ToInt32(Console.ReadLine());
-            
+            Console.Write("Digite agora 'R'(Fibonacci Recursivo) ou 'I'(Fibonacci Iterativo):");
+            char letra = Convert.ToChar(Console.ReadLine());
+
+            if(letra == 'R')
+            {
             for(int i = 1; i<=numero; i++)
             {
             Console.WriteLine("Fibonacci Recursivo: "+ fiboRec(i));
             }
+            }
+            else if(letra == 'I')
+            {
             for(int i = 1; i<=numero; i++)
             {
             Console.WriteLine("Fibonacci Iterativo: "+ fiboIte(i));
+            }
             }
         }
 

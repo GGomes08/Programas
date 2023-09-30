@@ -22,10 +22,11 @@ public class validaFibonacci {
         if( numValida == 0){
             System.out.println("Se encontra na sequencia é seu proximo número é: "+ num2);
         }else if(numValida==num3){
-            System.out.println("Se encontra");
+            System.out.println("Se encontra, o proximo número da sequência é "+ (numValida+num1));
         } else {
             System.out.println("Não faz parte");
         }
+        leitor.close();
     }
 
     

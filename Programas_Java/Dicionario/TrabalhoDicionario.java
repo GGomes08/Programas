@@ -10,15 +10,14 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /*
-Entrega do Trabalho 2- Algoritmos e Programação II
-Nós,
-(Seu Nome)
-declaramos que
-todas as respostas são fruto de nosso próprio trabalho,
-não copiamos respostas de colegas externos à equipe,
-não disponibilizamos nossas respostas para colegas externos ao grupo e
-não realizamos quaisquer outras atividades desonestas para nos beneficiar ou
-prejudicar outros.
+Descrição do Problema:
+Como a descrição original não foi achada, segue a logica,
+Ler um Arquivo .txt
+Guarda as palavras do txt em um Vetor com 1000 de posições
+Compara palavras com o "compareToIgnoreCase" e ordena alfabeticamente
+Se a palavra a mesma mas se encontra em maisculo, deixa ela minuscula
+Conta quantas palavras foram apresentadas
+Apresenta o Vetor com as palavras ordenadas
  */
 public class TrabalhoDicionario {
 

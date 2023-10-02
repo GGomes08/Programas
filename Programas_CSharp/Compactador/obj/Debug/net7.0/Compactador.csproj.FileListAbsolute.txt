@@ -1,0 +1,14 @@
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\bin\Debug\net7.0\Compactador.exe
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\bin\Debug\net7.0\Compactador.deps.json
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\bin\Debug\net7.0\Compactador.runtimeconfig.json
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\bin\Debug\net7.0\Compactador.dll
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\bin\Debug\net7.0\Compactador.pdb
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\Compactador.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\Compactador.AssemblyInfoInputs.cache
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\Compactador.AssemblyInfo.cs
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\Compactador.csproj.CoreCompileInputs.cache
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\Compactador.dll
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\refint\Compactador.dll
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\Compactador.pdb
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\Compactador.genruntimeconfig.cache
+C:\Users\gusta\Desktop\Github\Programas\Programas_CSharp\Compactador\obj\Debug\net7.0\ref\Compactador.dll
